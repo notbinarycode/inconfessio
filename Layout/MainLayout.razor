@@ -1,0 +1,50 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime Js
+
+<MudThemeProvider Theme="Ndr0n"/>
+
+<MudLayout>
+    <MudMainContent>
+        <MudItem Style="position:absolute; z-index:-10;" id="sketch-div"/>
+        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code
+{
+    public void Refresh()
+    {
+        StateHasChanged();
+    }
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await setP5();
+        }
+    }
+
+    async Task setP5()
+    {
+        await Js.InvokeVoidAsync("setp5");
+    }
+    
+    MudTheme Ndr0n = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Background = "000f",
+            Primary = "f00f",
+            Secondary = "a00f",
+            TextPrimary = "ffff",
+            TextSecondary = "f00f",
+        },
+        LayoutProperties = new LayoutProperties()
+        {
+            AppbarHeight = "0px",
+        }
+    };
+}

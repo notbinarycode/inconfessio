@@ -1,0 +1,44 @@
+﻿@page "/"
+@inject IJSRuntime Js
+
+<PageTitle>Inconfessio</PageTitle>
+
+<center>
+    <br/>
+    <br/>
+    <MudGrid>
+        <MudItem xs="3"></MudItem>
+        <MudItem xs="6">
+            @if (State == ConfessionBoxState.ShowConfessionBox)
+            {
+                <MudCard Elevation="0" Style="background-color: #000f">
+                    <MudCardContent>
+                        <MudText Typo="Typo.body1">Confissão</MudText>
+                        <MudTextField AutoGrow @bind-Value="@Confession" MaxLines="20"/>
+                    </MudCardContent>
+                </MudCard>
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" OnClick="@SubmitConfession">Confessar</MudButton>
+            }
+            else if (State == ConfessionBoxState.WaitingResponse)
+            {
+                <MudCard Elevation="0" Style="background-color: #000f">
+                    <MudCardContent>
+                        <MudText Typo="Typo.body1">Carregando Salvação</MudText>
+                        <br/>
+                        <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+                    </MudCardContent>
+                </MudCard>                
+            }
+            else if (State == ConfessionBoxState.ShowResponse)
+            {
+                <MudCard Elevation="0" Style="background-color: #000f">
+                    <MudCardContent>
+                        <MudText Typo="Typo.body1">@Response</MudText>
+                    </MudCardContent>
+                </MudCard>
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" OnClick="@RestartConfession">Recomeçar</MudButton>
+            }
+        </MudItem>
+        <MudItem xs="3"></MudItem>
+    </MudGrid>
+</center>
