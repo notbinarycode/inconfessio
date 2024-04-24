@@ -29,7 +29,7 @@ let sketch = function (p) {
     let judgment = p.loadImage("images/judgment.jpg");
     
     p.setup = function () {
-        p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
+        p.createCanvas(window.innerWidth, window.innerHeight, p.WEBGL);
         p.frameRate(60);
         p.blendMode(p.ADD);
         pos = [judgment.width/3, judgment.height/3];
