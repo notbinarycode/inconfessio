@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Inconfessio",
   "resources": {
-    "hash": "sha256-ziU1KHb0CLaeJZF4TcrNQOI7mwSh5EvVsZJsLkFO/FQ=",
+    "hash": "sha256-C9DW3Zh7IJTL44VtwOE+YnYl0xkV8Be6n1uTM1ntCoE=",
     "jsModuleNative": {
       "dotnet.native.8.0.3.wzxwl5s97r.js": "sha256-D4sYBYmDfH/YekgYRgX959/2RG6k28sJSHmcsn+iikk="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Inconfessio.wasm": "sha256-Bwl0PcqsnoB4ArdFmpPccRJI638nF3nw7/Dl3QEs6TQ=",
+      "Inconfessio.wasm": "sha256-VRA5IoUQ5f5uOgewjbOa4rgauvmjSsH5dAeViWp1gQs=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-mD/Kkid5kAbCd8FTvX7nRa1Zrwyztxc16j0tUjgwvKc=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-GDXX3bx3M3Eo9aw5dTL2aORkIIRc+kxO8pou0yJjz74=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-5gaOP81KAU7KoBrK09gZ/u74A0HX+TOJ5fGOh7xAHmQ=",
